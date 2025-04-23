@@ -1,2 +1,4 @@
 *.pdf
 Results/*.png
+*.html
+*.xml

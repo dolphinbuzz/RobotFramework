@@ -26,6 +26,9 @@ Teste de Sair do FOR
     [Documentation]  Você controla quando o FOR deve se encerrar antes de terminar todos os LOOPS
     Usando FOR IN com EXIT FOR LOOP IF
 
+Teste de FOR IN com lista
+    Utilizandoo FOR IN com lista
+
 *** Keywords ***
 Usando Repeat keyword
     Log To Console  ${\n}
@@ -57,4 +60,12 @@ Usando FOR IN com EXIT FOR LOOP IF
     FOR   ${INDICE}   ${FRUTA}   IN ENUMERATE   @{MINHA_LISTA_DE_FRUTAS}
         Log To Console    Minha fruta é: ${INDICE} --> ${FRUTA}!
         Exit For Loop If    '${FRUTA}'=='banana'
+    END
+
+Utilizandoo FOR IN com lista
+    FOR    ${index}    ${english}    ${finnish}    ${portugues}    IN
+    ...    1    cat        kissa     gato
+    ...    2    dog        koira     cachorro
+    ...    3    horse      hevonen   cavalo
+        Log    Animal ${index}:\nEm inglês: ${english}\nEm finlandês: ${finnish}\nEm pportugues: ${portugues}
     END
