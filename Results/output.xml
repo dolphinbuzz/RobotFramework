@@ -1,0 +1,582 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-04-22T21:52:48.939967" rpa="false" schemaversion="5">
+<suite id="s1" name="Amazon Testes" source="D:\Bibliotecas\Documentos\github\RobotFramework\WebTesting\amazon_testes.robot">
+<test id="s1-t1" name="Caso de teste 01 - Acesso ao menu &quot;Eletrônicos&quot;" line="8">
+<kw name="Abrir o navegador" owner="amazon_resources" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-04-22T21:52:49.234304" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<msg time="2025-04-22T21:52:50.395394" level="WARN">The chromedriver version (134.0.6998.90) detected in PATH at C:\Users\Gutenberg\AppData\Local\Programs\Python\Python313\Scripts\chromedriver.exe might not be compatible with the detected chrome version (135.0.7049.114); currently, chromedriver 135.0.7049.97 is recommended for chrome 135.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>browser=${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-04-22T21:52:49.234106" elapsed="2.225977"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-04-22T21:52:51.460291" elapsed="0.025921"/>
+</kw>
+<status status="PASS" start="2025-04-22T21:52:49.233561" elapsed="2.252780"/>
+</kw>
+<kw name="Acessar a home page do site Amazon.com.br" owner="amazon_resources">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-04-22T21:52:51.487136" level="INFO">Opening url 'https://www.amazon.com.br'</msg>
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-04-22T21:52:51.486975" elapsed="0.719540"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-22T21:53:02.207386" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-22T21:52:52.206771" elapsed="10.000711"/>
+</kw>
+<status status="PASS" start="2025-04-22T21:52:51.486691" elapsed="10.720888"/>
+</kw>
+<kw name="Entrar no menu &quot;Eletrônicos&quot;" owner="amazon_resources">
+<kw name="Capture Element Screenshot" owner="SeleniumLibrary">
+<msg time="2025-04-22T21:53:02.293693" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-1.png"&gt;&lt;img src="selenium-element-screenshot-1.png" width="400px"&gt;&lt;/a&gt;</msg>
+<arg>${MENU_ELETRONICOS}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="PASS" start="2025-04-22T21:53:02.208109" elapsed="0.085739"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-22T21:53:02.294376" level="INFO">Clicking element '//a[text()='Eletrônicos']'.</msg>
+<arg>${MENU_ELETRONICOS}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-22T21:53:02.294099" elapsed="3.551677"/>
+</kw>
+<status status="PASS" start="2025-04-22T21:53:02.207856" elapsed="3.638024"/>
+</kw>
+<kw name="Verificar se o título da página fica &quot;Eletrônicos e Tecnologia | Amazon.com.br&quot;" owner="amazon_resources" source_name="Verificar se o título da página fica &quot;${TEXTO}&quot;">
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2025-04-22T21:53:05.857190" level="INFO">Page title is 'Eletrônicos e Tecnologia | Amazon.com.br'.</msg>
+<arg>title=${TEXTO}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2025-04-22T21:53:05.846472" elapsed="0.010798"/>
+</kw>
+<status status="PASS" start="2025-04-22T21:53:05.846214" elapsed="0.011133"/>
+</kw>
+<kw name="Verificar se aparece a frase &quot;Eletrônicos e Tecnologia&quot;" owner="amazon_resources" source_name="Verificar se aparece a frase &quot;${FRASE}&quot;">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>text=${FRASE}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-04-22T21:53:05.857792" elapsed="0.021322"/>
+</kw>
+<status status="PASS" start="2025-04-22T21:53:05.857572" elapsed="0.021628"/>
+</kw>
+<kw name="Verificar se aparece a categoria &quot;Computadores e Informática&quot;" owner="amazon_resources" source_name="Verificar se aparece a categoria &quot;${CATEGORIA}&quot;">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-04-22T21:53:05.936331" level="INFO">Element '//ul//li//span//a//span[text()='Computadores e Informática']' is displayed.</msg>
+<arg>//ul//li//span//a//span[text()='${CATEGORIA}']</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-22T21:53:05.879742" elapsed="0.056675"/>
+</kw>
+<status status="PASS" start="2025-04-22T21:53:05.879520" elapsed="0.056977"/>
+</kw>
+<kw name="Verificar se aparece a categoria &quot;Tablets&quot;" owner="amazon_resources" source_name="Verificar se aparece a categoria &quot;${CATEGORIA}&quot;">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-04-22T21:53:05.966020" level="INFO">Element '//ul//li//span//a//span[text()='Tablets']' is displayed.</msg>
+<arg>//ul//li//span//a//span[text()='${CATEGORIA}']</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-22T21:53:05.937060" elapsed="0.029037"/>
+</kw>
+<status status="PASS" start="2025-04-22T21:53:05.936828" elapsed="0.029343"/>
+</kw>
+<kw name="Fechar o navegador" owner="amazon_resources" type="TEARDOWN">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-04-22T21:53:06.122746" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-04-22T21:53:05.966699" elapsed="0.156139"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-04-22T21:53:06.122971" elapsed="2.159584"/>
+</kw>
+<status status="PASS" start="2025-04-22T21:53:05.966458" elapsed="2.316195"/>
+</kw>
+<doc>Este teste verifica o menu Eletrônicos do side da amazon</doc>
+<tag>categorias</tag>
+<tag>menus</tag>
+<status status="PASS" start="2025-04-22T21:52:49.232857" elapsed="19.049928"/>
+</test>
+<test id="s1-t2" name="Caso de teste 02 - Pesquisa de um Produto" line="19">
+<kw name="Abrir o navegador" owner="amazon_resources" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-04-22T21:53:08.283907" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<msg time="2025-04-22T21:53:08.471459" level="WARN">The chromedriver version (134.0.6998.90) detected in PATH at C:\Users\Gutenberg\AppData\Local\Programs\Python\Python313\Scripts\chromedriver.exe might not be compatible with the detected chrome version (135.0.7049.114); currently, chromedriver 135.0.7049.97 is recommended for chrome 135.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>browser=${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-04-22T21:53:08.283748" elapsed="1.220223"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-04-22T21:53:09.504120" elapsed="0.025437"/>
+</kw>
+<status status="PASS" start="2025-04-22T21:53:08.283529" elapsed="1.246116"/>
+</kw>
+<kw name="Acessar a home page do site Amazon.com.br" owner="amazon_resources">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-04-22T21:53:09.530225" level="INFO">Opening url 'https://www.amazon.com.br'</msg>
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-04-22T21:53:09.530103" elapsed="0.635321"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-22T21:53:20.166260" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-22T21:53:10.165778" elapsed="10.000577"/>
+</kw>
+<status status="PASS" start="2025-04-22T21:53:09.529901" elapsed="10.636538"/>
+</kw>
+<kw name="Digitar o nome de produto &quot;Xbox Series S&quot; no campo de pesquisa" owner="amazon_resources" source_name="Digitar o nome de produto &quot;${PRODUTO}&quot; no campo de pesquisa">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-22T21:53:20.167058" level="INFO">Typing text 'Xbox Series S' into text field '//input[@id='twotabsearchtextbox']'.</msg>
+<arg>${BUSCA}</arg>
+<arg>${PRODUTO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-22T21:53:20.166887" elapsed="0.106978"/>
+</kw>
+<status status="PASS" start="2025-04-22T21:53:20.166671" elapsed="0.107288"/>
+</kw>
+<kw name="Clicar no botão de pesquisa" owner="amazon_resources">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-22T21:53:20.274548" level="INFO">Clicking element '//input[@type='submit']'.</msg>
+<arg>${SUBMIT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-22T21:53:20.274404" elapsed="1.691008"/>
+</kw>
+<status status="PASS" start="2025-04-22T21:53:20.274194" elapsed="1.691312"/>
+</kw>
+<kw name="Verificar o resultado da pesquisa se está listando o produto &quot;Xbox Series S&quot;" owner="amazon_resources" source_name="Verificar o resultado da pesquisa se está listando o produto ${PRODUTO}">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//h2//span[text()='${PRODUTO}']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-22T21:53:21.966025" elapsed="0.015394"/>
+</kw>
+<status status="PASS" start="2025-04-22T21:53:21.965774" elapsed="0.015737"/>
+</kw>
+<kw name="Fechar o navegador" owner="amazon_resources" type="TEARDOWN">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-04-22T21:53:22.111457" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-04-22T21:53:21.982360" elapsed="0.129213"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-04-22T21:53:22.111744" elapsed="3.676238"/>
+</kw>
+<status status="PASS" start="2025-04-22T21:53:21.981988" elapsed="3.806316"/>
+</kw>
+<doc>Este teste verifica a busca de um produto</doc>
+<tag>busca_produtos</tag>
+<tag>lista_busca</tag>
+<status status="PASS" start="2025-04-22T21:53:08.283175" elapsed="17.505728"/>
+</test>
+<test id="s1-t3" name="Caso de Teste 03 - Adicionar Produto no Carrinho" line="27">
+<kw name="Abrir o navegador" owner="amazon_resources" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-04-22T21:53:25.793106" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<msg time="2025-04-22T21:53:25.975729" level="WARN">The chromedriver version (134.0.6998.90) detected in PATH at C:\Users\Gutenberg\AppData\Local\Programs\Python\Python313\Scripts\chromedriver.exe might not be compatible with the detected chrome version (135.0.7049.114); currently, chromedriver 135.0.7049.97 is recommended for chrome 135.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>browser=${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-04-22T21:53:25.792951" elapsed="1.240607"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-04-22T21:53:27.033702" elapsed="0.026775"/>
+</kw>
+<status status="PASS" start="2025-04-22T21:53:25.792732" elapsed="1.267829"/>
+</kw>
+<kw name="Acessar a home page do site Amazon.com.br" owner="amazon_resources">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-04-22T21:53:27.061171" level="INFO">Opening url 'https://www.amazon.com.br'</msg>
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-04-22T21:53:27.061051" elapsed="0.722677"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-22T21:53:37.784362" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-22T21:53:27.783871" elapsed="10.000581"/>
+</kw>
+<status status="PASS" start="2025-04-22T21:53:27.060844" elapsed="10.723691"/>
+</kw>
+<kw name="Digitar o nome de produto &quot;Xbox Series S&quot; no campo de pesquisa" owner="amazon_resources" source_name="Digitar o nome de produto &quot;${PRODUTO}&quot; no campo de pesquisa">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-22T21:53:37.785195" level="INFO">Typing text 'Xbox Series S' into text field '//input[@id='twotabsearchtextbox']'.</msg>
+<arg>${BUSCA}</arg>
+<arg>${PRODUTO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-22T21:53:37.785030" elapsed="0.121691"/>
+</kw>
+<status status="PASS" start="2025-04-22T21:53:37.784808" elapsed="0.122001"/>
+</kw>
+<kw name="Clicar no botão de pesquisa" owner="amazon_resources">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-22T21:53:37.907386" level="INFO">Clicking element '//input[@type='submit']'.</msg>
+<arg>${SUBMIT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-22T21:53:37.907245" elapsed="1.768305"/>
+</kw>
+<status status="PASS" start="2025-04-22T21:53:37.907031" elapsed="1.768614"/>
+</kw>
+<kw name="Verificar o resultado da pesquisa se está listando o produto &quot;Xbox Series S&quot;" owner="amazon_resources" source_name="Verificar o resultado da pesquisa se está listando o produto ${PRODUTO}">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//h2//span[text()='${PRODUTO}']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-22T21:53:39.676201" elapsed="0.017522"/>
+</kw>
+<status status="PASS" start="2025-04-22T21:53:39.675924" elapsed="0.017887"/>
+</kw>
+<kw name="Adicionar o produto &quot;Xbox Series S&quot; no carrinho" owner="amazon_resources" source_name="Adicionar o produto &quot;${PRODUTO}&quot; no carrinho">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-22T21:53:39.694459" level="INFO">Clicking element '//h2//span[text()='Xbox Series S']'.</msg>
+<arg>//h2//span[text()='${PRODUTO}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-22T21:53:39.694298" elapsed="2.865449"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ADD_CARRINHO}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-22T21:53:42.560089" elapsed="0.034931"/>
+</kw>
+<msg time="2025-04-22T21:53:42.595139" level="INFO">${present} = True</msg>
+<var>${present}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${ADD_CARRINHO}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-04-22T21:53:42.559917" elapsed="0.035246"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-22T21:53:42.595592" level="INFO">Clicking element '//input[@id='add-to-cart-button']'.</msg>
+<arg>${ADD_CARRINHO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-22T21:53:42.595458" elapsed="0.086462"/>
+</kw>
+<arg>${present}</arg>
+<arg>Click Element</arg>
+<arg>${ADD_CARRINHO}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-04-22T21:53:42.595290" elapsed="0.086824"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-22T21:53:46.683062" level="INFO">Slept 4 seconds.</msg>
+<arg>4s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-22T21:53:42.682252" elapsed="4.000895"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-04-22T21:53:46.703094" level="INFO">Element '//span[contains(text(),'Não, obrigado(a)')]//parent::span//input[@type='submit']' is displayed.</msg>
+<arg>${RECUSA_GARANTIA}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-22T21:53:46.683447" elapsed="0.019729"/>
+</kw>
+<msg time="2025-04-22T21:53:46.703281" level="INFO">${garantia} = True</msg>
+<var>${garantia}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${RECUSA_GARANTIA}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-04-22T21:53:46.683301" elapsed="0.020001"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Recusa garantia" owner="amazon_resources">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-22T21:53:46.703941" level="INFO">Clicking element '//span[contains(text(),'Não, obrigado(a)')]//parent::span//input[@type='submit']'.</msg>
+<arg>${RECUSA_GARANTIA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-22T21:53:46.703796" elapsed="0.075382"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2025-04-22T21:53:51.919495" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-04-22T21:53:51.919655" level="FAIL">Element '//span[contains(text(),'Carrinho')]//parent::span//input[@type='submit']' not visible after 5 seconds.</msg>
+<arg>${CARRINHO_GARANTIA}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-04-22T21:53:46.779392" elapsed="5.153077">Element '//span[contains(text(),'Carrinho')]//parent::span//input[@type='submit']' not visible after 5 seconds.</status>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${CARRINHO_GARANTIA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-04-22T21:53:51.932631" elapsed="0.000029"/>
+</kw>
+<status status="FAIL" start="2025-04-22T21:53:46.703629" elapsed="5.229142">Element '//span[contains(text(),'Carrinho')]//parent::span//input[@type='submit']' not visible after 5 seconds.</status>
+</kw>
+<arg>${garantia}</arg>
+<arg>Recusa garantia</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="FAIL" start="2025-04-22T21:53:46.703435" elapsed="5.229380">Element '//span[contains(text(),'Carrinho')]//parent::span//input[@type='submit']' not visible after 5 seconds.</status>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<arg>${garantia}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="NOT RUN" start="2025-04-22T21:53:51.932914" elapsed="0.000032"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-04-22T21:53:51.933018" elapsed="0.000020"/>
+</kw>
+<status status="FAIL" start="2025-04-22T21:53:39.694083" elapsed="12.239024">Element '//span[contains(text(),'Carrinho')]//parent::span//input[@type='submit']' not visible after 5 seconds.</status>
+</kw>
+<kw name="Verificar se o produto &quot;Xbox Series S&quot; foi adicionado com sucesso" owner="amazon_resources" source_name="Verificar se o produto &quot;${PRODUTO}&quot; foi adicionado com sucesso">
+<status status="NOT RUN" start="2025-04-22T21:53:51.933414" elapsed="0.000033"/>
+</kw>
+<kw name="Fechar o navegador" owner="amazon_resources" type="TEARDOWN">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-04-22T21:53:52.096725" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-04-22T21:53:51.933964" elapsed="0.162842"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-04-22T21:53:52.096943" elapsed="2.205570"/>
+</kw>
+<status status="PASS" start="2025-04-22T21:53:51.933765" elapsed="2.368858"/>
+</kw>
+<doc>Esse teste verifica a adição de um produto no carrinho de compras</doc>
+<tag>adicionar_carrinho</tag>
+<status status="FAIL" start="2025-04-22T21:53:25.791179" elapsed="28.511656">Element '//span[contains(text(),'Carrinho')]//parent::span//input[@type='submit']' not visible after 5 seconds.</status>
+</test>
+<test id="s1-t4" name="Caso de Teste 04 - Remover Produto do Carrinho" line="37">
+<kw name="Abrir o navegador" owner="amazon_resources" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-04-22T21:53:54.304357" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<msg time="2025-04-22T21:53:54.486658" level="WARN">The chromedriver version (134.0.6998.90) detected in PATH at C:\Users\Gutenberg\AppData\Local\Programs\Python\Python313\Scripts\chromedriver.exe might not be compatible with the detected chrome version (135.0.7049.114); currently, chromedriver 135.0.7049.97 is recommended for chrome 135.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>browser=${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-04-22T21:53:54.304198" elapsed="1.196601"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-04-22T21:53:55.500933" elapsed="0.028639"/>
+</kw>
+<status status="PASS" start="2025-04-22T21:53:54.303991" elapsed="1.225681"/>
+</kw>
+<kw name="Acessar a home page do site Amazon.com.br" owner="amazon_resources">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-04-22T21:53:55.530355" level="INFO">Opening url 'https://www.amazon.com.br'</msg>
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-04-22T21:53:55.530220" elapsed="0.729637"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-22T21:54:06.260394" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-22T21:53:56.260014" elapsed="10.000472"/>
+</kw>
+<status status="PASS" start="2025-04-22T21:53:55.529985" elapsed="10.730581"/>
+</kw>
+<kw name="Digitar o nome de produto &quot;Xbox Series S&quot; no campo de pesquisa" owner="amazon_resources" source_name="Digitar o nome de produto &quot;${PRODUTO}&quot; no campo de pesquisa">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-22T21:54:06.261234" level="INFO">Typing text 'Xbox Series S' into text field '//input[@id='twotabsearchtextbox']'.</msg>
+<arg>${BUSCA}</arg>
+<arg>${PRODUTO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-22T21:54:06.261069" elapsed="0.101960"/>
+</kw>
+<status status="PASS" start="2025-04-22T21:54:06.260851" elapsed="0.102290"/>
+</kw>
+<kw name="Clicar no botão de pesquisa" owner="amazon_resources">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-22T21:54:06.363899" level="INFO">Clicking element '//input[@type='submit']'.</msg>
+<arg>${SUBMIT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-22T21:54:06.363745" elapsed="1.818718"/>
+</kw>
+<status status="PASS" start="2025-04-22T21:54:06.363498" elapsed="1.819082"/>
+</kw>
+<kw name="Verificar o resultado da pesquisa se está listando o produto &quot;Xbox Series S&quot;" owner="amazon_resources" source_name="Verificar o resultado da pesquisa se está listando o produto ${PRODUTO}">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//h2//span[text()='${PRODUTO}']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-22T21:54:08.183334" elapsed="0.017574"/>
+</kw>
+<status status="PASS" start="2025-04-22T21:54:08.182959" elapsed="0.018048"/>
+</kw>
+<kw name="Adicionar o produto &quot;Xbox Series S&quot; no carrinho" owner="amazon_resources" source_name="Adicionar o produto &quot;${PRODUTO}&quot; no carrinho">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-22T21:54:08.201788" level="INFO">Clicking element '//h2//span[text()='Xbox Series S']'.</msg>
+<arg>//h2//span[text()='${PRODUTO}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-22T21:54:08.201602" elapsed="3.060794"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ADD_CARRINHO}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-22T21:54:11.262699" elapsed="0.015204"/>
+</kw>
+<msg time="2025-04-22T21:54:11.278017" level="INFO">${present} = True</msg>
+<var>${present}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${ADD_CARRINHO}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-04-22T21:54:11.262552" elapsed="0.015490"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-22T21:54:11.278487" level="INFO">Clicking element '//input[@id='add-to-cart-button']'.</msg>
+<arg>${ADD_CARRINHO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-22T21:54:11.278340" elapsed="2.050717"/>
+</kw>
+<arg>${present}</arg>
+<arg>Click Element</arg>
+<arg>${ADD_CARRINHO}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-04-22T21:54:11.278178" elapsed="2.050956"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-22T21:54:17.329998" level="INFO">Slept 4 seconds.</msg>
+<arg>4s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-22T21:54:13.329246" elapsed="4.001094"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-04-22T21:54:17.519815" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-04-22T21:54:17.519946" level="FAIL">Element with locator '//span[contains(text(),'Não, obrigado(a)')]//parent::span//input[@type='submit']' not found.</msg>
+<arg>${RECUSA_GARANTIA}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-04-22T21:54:17.331719" elapsed="0.208755">Element with locator '//span[contains(text(),'Não, obrigado(a)')]//parent::span//input[@type='submit']' not found.</status>
+</kw>
+<msg time="2025-04-22T21:54:17.540598" level="INFO">${garantia} = False</msg>
+<var>${garantia}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${RECUSA_GARANTIA}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-04-22T21:54:17.330967" elapsed="0.209656"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${garantia}</arg>
+<arg>Recusa garantia</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-04-22T21:54:17.540758" elapsed="0.000114"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2025-04-22T21:54:17.541104" level="INFO">${garantia} = False</msg>
+<arg>${garantia}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2025-04-22T21:54:17.540958" elapsed="0.000180"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-22T21:54:19.541860" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-22T21:54:17.541230" elapsed="2.000767"/>
+</kw>
+<status status="PASS" start="2025-04-22T21:54:08.201327" elapsed="11.340811"/>
+</kw>
+<kw name="Verificar se o produto &quot;Xbox Series S&quot; foi adicionado com sucesso" owner="amazon_resources" source_name="Verificar se o produto &quot;${PRODUTO}&quot; foi adicionado com sucesso">
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Valida add produto e acessa carrinho" owner="amazon_resources">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${TITULO_ADICIONADO}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-22T21:54:19.543677" elapsed="0.015921"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-22T21:54:19.559910" level="INFO">Clicking element '//a[@id='nav-cart']'.</msg>
+<arg>${CARRINHO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-22T21:54:19.559740" elapsed="0.942270"/>
+</kw>
+<status status="PASS" start="2025-04-22T21:54:19.543390" elapsed="0.958709"/>
+</kw>
+<arg>${garantia}!=True</arg>
+<arg>Valida add produto e acessa carrinho</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-04-22T21:54:19.543016" elapsed="0.959126"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>//span[contains(text(),'${PRODUTO}')]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-04-22T21:54:20.502253" elapsed="0.008605"/>
+</kw>
+<status status="PASS" start="2025-04-22T21:54:19.542631" elapsed="0.968315"/>
+</kw>
+<kw name="Remover o produto &quot;Xbox Series S&quot; do carrinho" owner="amazon_resources" source_name="Remover o produto &quot;${PRODUTO}&quot; do carrinho">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-22T21:54:20.511522" level="INFO">Clicking element '//span//input[@value='Excluir']'.</msg>
+<arg>${EXCLUIR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-22T21:54:20.511387" elapsed="0.088180"/>
+</kw>
+<kw name="Catenate" owner="BuiltIn">
+<msg time="2025-04-22T21:54:20.599918" level="INFO">${locator} = //span[(text()=' foi removido de Carrinho de compras. ')]//a[contains(text(), 'Xbox Series S')]</msg>
+<var>${locator}</var>
+<arg>SEPARATOR=</arg>
+<arg>${MENSAGEM_EXCLUIDO}</arg>
+<arg>//a[contains(text(), '${PRODUTO}')]</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="PASS" start="2025-04-22T21:54:20.599718" elapsed="0.000227"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-04-22T21:54:20.610493" level="INFO">Current page contains element '//span[(text()=' foi removido de Carrinho de compras. ')]//a[contains(text(), 'Xbox Series S')]'.</msg>
+<arg>${locator}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-04-22T21:54:20.600046" elapsed="0.010532"/>
+</kw>
+<status status="PASS" start="2025-04-22T21:54:20.511177" elapsed="0.099566"/>
+</kw>
+<kw name="Verificar se o carrinho fica vazio" owner="amazon_resources">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-22T21:54:21.611525" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-22T21:54:20.611184" elapsed="1.000435"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-04-22T21:54:21.623129" level="INFO">Current page contains element '//span[contains(text(),'0 produtos')]'.</msg>
+<arg>${CARRINHO_VAZIO}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-04-22T21:54:21.611768" elapsed="0.011436"/>
+</kw>
+<status status="PASS" start="2025-04-22T21:54:20.610973" elapsed="1.012315"/>
+</kw>
+<kw name="Fechar o navegador" owner="amazon_resources" type="TEARDOWN">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-04-22T21:54:21.794674" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-04-22T21:54:21.623855" elapsed="0.170914"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-04-22T21:54:21.794896" elapsed="2.192185"/>
+</kw>
+<status status="PASS" start="2025-04-22T21:54:21.623641" elapsed="2.363533"/>
+</kw>
+<doc>Esse teste verifica a remoção de um produto no carrinho de compras</doc>
+<tag>remover_carrinho</tag>
+<status status="PASS" start="2025-04-22T21:53:54.303557" elapsed="29.683811"/>
+</test>
+<doc>Esta suite teste o site da amazon</doc>
+<status status="FAIL" start="2025-04-22T21:52:48.941264" elapsed="95.046897"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">adicionar_carrinho</stat>
+<stat pass="1" fail="0" skip="0">busca_produtos</stat>
+<stat pass="1" fail="0" skip="0">categorias</stat>
+<stat pass="1" fail="0" skip="0">lista_busca</stat>
+<stat pass="1" fail="0" skip="0">menus</stat>
+<stat pass="1" fail="0" skip="0">remover_carrinho</stat>
+</tag>
+<suite>
+<stat name="Amazon Testes" id="s1" pass="3" fail="1" skip="0">Amazon Testes</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-04-22T21:52:50.395394" level="WARN">The chromedriver version (134.0.6998.90) detected in PATH at C:\Users\Gutenberg\AppData\Local\Programs\Python\Python313\Scripts\chromedriver.exe might not be compatible with the detected chrome version (135.0.7049.114); currently, chromedriver 135.0.7049.97 is recommended for chrome 135.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2025-04-22T21:53:08.471459" level="WARN">The chromedriver version (134.0.6998.90) detected in PATH at C:\Users\Gutenberg\AppData\Local\Programs\Python\Python313\Scripts\chromedriver.exe might not be compatible with the detected chrome version (135.0.7049.114); currently, chromedriver 135.0.7049.97 is recommended for chrome 135.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2025-04-22T21:53:25.975729" level="WARN">The chromedriver version (134.0.6998.90) detected in PATH at C:\Users\Gutenberg\AppData\Local\Programs\Python\Python313\Scripts\chromedriver.exe might not be compatible with the detected chrome version (135.0.7049.114); currently, chromedriver 135.0.7049.97 is recommended for chrome 135.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2025-04-22T21:53:54.486658" level="WARN">The chromedriver version (134.0.6998.90) detected in PATH at C:\Users\Gutenberg\AppData\Local\Programs\Python\Python313\Scripts\chromedriver.exe might not be compatible with the detected chrome version (135.0.7049.114); currently, chromedriver 135.0.7049.97 is recommended for chrome 135.*, so it is advised to delete the driver in PATH and retry</msg>
+</errors>
+</robot>
